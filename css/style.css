@@ -19,20 +19,21 @@
   --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
-  --primary: #ED6436;
-  --secondary: #65C178;
+  --primary: #703a44;
+  --secondary: #da828f;
+  --third: #f8c592;
   --success: #28a745;
   --info: #17a2b8;
   --warning: #ffc107;
   --danger: #dc3545;
-  --light: #F2F2F4;
+  --light: #f4f0eb;
   --dark: #181818;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Nunito Sans", sans-serif;
+  --font-family-sans-serif: "Baloo", sans-serif;
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -40,6 +41,11 @@
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Baloo;
+  src: url(font/Baloo-Regular.ttf);
 }
 
 html {
@@ -362,7 +368,7 @@ template {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-family: "Nunito", sans-serif;
+  font-family: "Baloo", sans-serif;
   font-weight: 500;
   line-height: 1.2;
   color: #181818;
@@ -2372,14 +2378,14 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #ED6436;
-  border-color: #ED6436;
+  background-color: var(--primary);
+  border-color:  var(--primary);
 }
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #e84a15;
-  border-color: #dc4614;
+  background-color:  var(--secondary);
+  border-color: var(--secondary);
 }
 
 .btn-primary:focus, .btn-primary.focus {
@@ -6416,7 +6422,7 @@ button.bg-danger:focus {
 }
 
 .bg-light {
-  background-color: #F2F2F4 !important;
+  background-color: var(--light) !important;
 }
 
 a.bg-light:hover, a.bg-light:focus,
@@ -9526,7 +9532,7 @@ button.bg-dark:focus {
 }
 
 .text-primary {
-  color: #ED6436 !important;
+  color: var(--primary) !important;
 }
 
 a.text-primary:hover, a.text-primary:focus {
@@ -9534,11 +9540,15 @@ a.text-primary:hover, a.text-primary:focus {
 }
 
 .text-secondary {
-  color: #65C178 !important;
+  color: var(--secondary) !important;
 }
 
 a.text-secondary:hover, a.text-secondary:focus {
   color: #3e9b52 !important;
+}
+
+.text-third {
+  color: var(--third) !important;
 }
 
 .text-success {
